@@ -17,7 +17,12 @@ const log = (tags, data) => {
   if (data) {
     Object.assign(logs, { data });
   }
-  Pino.info(logs);
+  if (!_.isEmpty(process.env.DISABLE_LOG)) {
+    // eslint-disable-next-line no-console
+    console.log(logs);
+  } else {
+    Pino.info(logs);
+  }
 };
 
 const logRequest = (req, res) => {
