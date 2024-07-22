@@ -1,0 +1,503 @@
+{
+	"info": {
+		"_postman_id": "c5a0f8f9-a785-478f-9001-d8e4f8fc0d25",
+		"name": "CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23712669",
+		"_collection_link": "https://bold-equinox-749589.postman.co/workspace/POS---API~df278565-f95f-45f5-8e1d-9649cb26183b/collection/23712669-c5a0f8f9-a785-478f-9001-d8e4f8fc0d25?action=share&source=collection_link&creator=23712669"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "dev",
+					"item": [
+						{
+							"name": "Get List Laptop",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/laptop",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Laptop",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"MSI Bravo 14\",\r\n    \"price\": 9499000,\r\n    \"stock\": \"7\",\r\n    \"brand_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/laptop",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Laptop",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/laptop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Laptop",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/laptop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "production",
+					"item": [
+						{
+							"name": "Get List Laptop",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v1/laptop",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Laptop",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"MSI Bravo 14\",\r\n    \"price\": 9499000,\r\n    \"stock\": 7,\r\n    \"brand_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v1/laptop",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Laptop",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v1/laptop/:id",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "7"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Laptop",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"testinggg\",\r\n    \"price\": 10000,\r\n    \"stock\": 19,\r\n    \"brand_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v1/laptop/:id",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v1",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "v2",
+			"item": [
+				{
+					"name": "dev",
+					"item": [
+						{
+							"name": "Get List Laptop",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v2/laptop",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Laptop",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"MSI Bravo 13\",\r\n    \"price\": 7499000,\r\n    \"stock\": 10,\r\n    \"brand_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v2/laptop",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Laptop",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v2/laptop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Laptop",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/v2/laptop/:id",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v2",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "production",
+					"item": [
+						{
+							"name": "Get List Laptop",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v2/laptop",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v2",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Laptop",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"MSI Bravo 13\",\r\n    \"price\": 7499000,\r\n    \"stock\": 10,\r\n    \"brand_id\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v2/laptop",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v2",
+										"laptop"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Laptop",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v2/laptop/:id",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v2",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Laptop",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "https://assignment3zhafranafif-production.up.railway.app/api/v2/laptop/:id",
+									"protocol": "https",
+									"host": [
+										"assignment3zhafranafif-production",
+										"up",
+										"railway",
+										"app"
+									],
+									"path": [
+										"api",
+										"v2",
+										"laptop",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
