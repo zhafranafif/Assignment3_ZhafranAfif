@@ -11,7 +11,7 @@ const port = process.env.PORT || 8080;
 const anime = require('./server/api/anime');
 const phonebook = require('./server/api/phonebook');
 const phonebookV2 = require('./server/api/phonebookV2');
-
+const laptop = require('./server/api/laptop');
 // Middleware
 dotenv.config();
 app.use(express.json());
@@ -37,6 +37,7 @@ app.use((req, res, next) => {
 app.use('/api/v1/anime', anime);
 app.use('/api/v1/phonebook', phonebook);
 app.use('/api/v2/phonebook', phonebookV2);
+app.use('/api', laptop);
 
 app.get('/sys/ping', (req, res) => {
   req.startTime = process.hrtime();
