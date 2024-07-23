@@ -46,12 +46,14 @@ const addLaptop = async (name, price, stock, brandId) => {
 
 const editLaptop = async (id, name, price, stock, brandId) => {
   const query = `UPDATE ${laptopTable} SET name = ?, price = ?, stock = ?, brand_id = ? WHERE id = ?`;
-  await executeQuery(query, [name, price, stock, brandId, id]);
+  const result = await executeQuery(query, [name, price, stock, brandId, id]);
+  return result?.affectedRows > 0;
 };
 
 const deleteLaptop = async (id) => {
   const query = `DELETE FROM ${laptopTable} WHERE id = ?`;
-  await executeQuery(query, [id]);
+  const result = await executeQuery(query, [id]);
+  return result?.affectedRows > 0;
 };
 
 module.exports = {
